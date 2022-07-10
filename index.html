@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Opus</title>
+</head>
+<body>
+    <h1>OPUS I</h1>
+    <h2>Presión de saturación</h2>
+    <label for="T">T</label>
+    <input type="number" id="T" placeholder="Temperatura"   >
+
+    <label for="A">A</label>
+    <input type="number" id="A" placeholder="Factor A" >
+
+    <label for="B">B</label>
+    <input type="number" id="B" placeholder="Factor B" >
+
+    <label for="C">C</label>
+    <input type="number" id="C" placeholder="Factor C" >
+
+    <button onclick="presionSaturacion()">Calcular</button>
+    <p id="presionSat"></p>
+
+    <h2>Temperatura máxima</h2>
+    <label for="Ps">Ps</label>
+    <input type="number" id="Ps" placeholder="Presión de saturación"  >
+
+    <label for="A1">A1</label>
+    <input type="number" id="A1" placeholder="Factor A1" >
+
+    <label for="B1">B1</label>
+    <input type="number" id="B1" placeholder="Factor B1" >
+
+    <label for="C1">C1</label>
+    <input type="number" id="C1" placeholder="Factor C1" >
+    
+    <label for="A2">A2</label>
+    <input type="number" id="A2" placeholder="Factor A2" >
+
+    <label for="B2">B2</label>
+    <input type="number" id="B2" placeholder="Factor B2" >
+
+    <label for="C2">C2</label>
+    <input type="number" id="C2" placeholder="Factor C2" >
+
+    <button onclick="tempMax()">Calcular</button>
+    <p id="tempMax"></p>
+
+   
+
+    <h2>Y'</h2>
+    <label for="P">P</label>
+    <input type="number" id="P" placeholder="P">
+
+    <label for="tMax">Tmax</label>
+    <input type="number" id="tMax" placeholder="Temp max">
+
+    
+    <p id="Y'"></p>
+
+
+    <script src="./main.js"></script>
+</body>
+</html>
