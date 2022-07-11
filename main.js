@@ -1,25 +1,38 @@
 
 const presionSaturacion= () => {
-    const T= document.getElementById('T').value
-    const A= document.getElementById('A').value
-    const B= document.getElementById('B').value
-    const C= document.getElementById('C').value
+    const t= document.getElementById('T').value
+    const T= Number(t)
     const presionSat= document.getElementById('presionSat')
+    const A1= 23.7093
+    const B1= 4111
+    const C1= 237.7    
+    const A2= 23.1863
+    const B2= 3809.4
+    const C2= 226.7
 
-    const Ps= Math.exp(A-B/(C+T))
-    
-    presionSat.innerText= "La presión de saturación es " + Ps
+    console.log(t)
+    console.log(T)
+    if (T >= 57) {
+        const Ps= Math.exp(A2-B2/(C2+T))
+        presionSat.innerText= "La presión de saturación es: "+Ps
+
+    } else {
+        const Ps= Math.exp(A1-B1/(C1+T))
+        presionSat.innerText= "La presión de saturación es: "+Ps
+
+    }
 }
 
 const tempMax= () => {
-    const Ps= document.getElementById('Ps').value
-    const A1= document.getElementById('A1').value
-    const B1= document.getElementById('B1').value
-    const C1= document.getElementById('C1').value
-    const A2= document.getElementById('A2').value
-    const B2= document.getElementById('B2').value
-    const C2= document.getElementById('C2').value
+    const ps= document.getElementById('Ps').value
+    const Ps= Number(ps)
     const tempMax= document.getElementById('tempMax')
+    const A1= 23.7093
+    const B1= 4111
+    const C1= 237.7
+    const A2= 23.1863
+    const B2= 3809.4    
+    const C2= 226.7
 
     const T= B1/(A1-Math.log(Ps)) - C1
     if (0<= T <= 57 ) {
