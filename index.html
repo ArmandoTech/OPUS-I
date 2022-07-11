@@ -9,28 +9,38 @@
 <body>
     <h1>OPUS I</h1>
     <h2>Presión de saturación</h2>
-    <label for="T">T</label>
-    <input type="number" id="T" placeholder="Temperatura">
-    <button onclick="presionSaturacion()">Calcular</button>
-    <p id="presionSat"></p> 
-    
+    <form onsubmit="presionSaturacion(event)">
+        <label for="T">T</label>
+        <input type="number" id="T" placeholder="Temperatura">
+        <button type="submit">Calcular</button>
+        <p id="presionSat"></p> 
+    </form>
 
     <h2>Temperatura máxima</h2>
-    <label for="Ps">Ps</label>
-    <input type="number" id="Ps" placeholder="Presión de saturación"  >
-
-    <button onclick="tempMax()">Calcular</button>
-    <p id="tempMax"></p>
-
+    <form onsubmit="tempMax(event)">
+        <label for="Ps">Ps</label>
+        <input type="number" id="Ps" placeholder="Presión de saturación"  >
+        <button type="submit"">Calcular</button>
+        <p id="tempMax"></p>
+    </form>
    
 
     <h2>Y'</h2>
-    <label for="P">P</label>
-    <input type="number" id="P" placeholder="P">
+    <form onsubmit="yPrima(event)">
+        <label for="P">P</label>
+        <input type="number" id="P" placeholder="P">
 
-    <label for="tMax">Tmax</label>
-    <input type="number" id="tMax" placeholder="Temp max">
+        <label for="tMax">Tmax</label>
+        <input type="number" id="tMax" placeholder="Temp max">
 
+        <label for="mA"></label>
+        <input type="number" id="mA" placeholder="Peso Molecular A">
+
+        <label for="mB"></label>
+        <input type="number" id="mB" placeholder="Peso Molecular B">
+
+        <button type="submit">Calcular</button>
+    </form>
     
     <p id="Y'"></p>
 
